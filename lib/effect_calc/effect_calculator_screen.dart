@@ -5,10 +5,8 @@ class EffectCalculatorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Effect Calculator"),
-      ),
+    return const Center(
+      child: Text("Effect Calculator"),
     );
   }
 }
