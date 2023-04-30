@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'app_state.dart';
-import 'card_button.dart';
-import 'navigation/destination.dart';
+import '../app/app_controller.dart';
+import '../card_button.dart';
+import '../navigation/destination.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GridView.count(
       primary: false,
       padding: const EdgeInsets.all(10.0),
@@ -19,15 +19,16 @@ class HomeScreen extends StatelessWidget {
       mainAxisSpacing: 10.0,
       children: [
         CardButton(
-          onPressed: () => context
-              .read<AppState>()
+          onPressed: () => ref
+              .read(appProvider.notifier)
               .navigateTo(Destination.gasPipeCalculator),
           text: "Gas Pipe Calculator",
           icon: Icons.bathtub_rounded,
         ),
         CardButton(
-          onPressed: () =>
-              context.read<AppState>().navigateTo(Destination.effectCalculator),
+          onPressed: () => ref
+              .read(appProvider.notifier)
+              .navigateTo(Destination.effectCalculator),
           text: "Effect Calculator",
           icon: Icons.gas_meter_rounded,
         ),
