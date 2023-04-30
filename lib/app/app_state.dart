@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-import '../navigation/destination.dart';
+import 'destination.dart';
 
 @immutable
 class AppState {

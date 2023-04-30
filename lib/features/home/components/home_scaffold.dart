@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../app/app_controller.dart';
-import '../effect_calc/effect_calculator_screen.dart';
-import '../gas_pipe_calc/gas_pipe_calculator_screen.dart';
-import '../navigation/destination.dart';
-import '../settings/settings_screen.dart';
-import 'home_screen.dart';
+import '../../../app/app_controller.dart';
+import '../../effect_calculator/ui/effect_calculator_screen.dart';
+import '../../gas_pipe_calculator/ui/gas_pipe_calculator_screen.dart';
+import '../../../app/destination.dart';
+import '../../settings/settings_screen.dart';
+import '../home_screen.dart';
 
 class HomeScaffold extends ConsumerWidget {
   const HomeScaffold({Key? key}) : super(key: key);

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../app/app_controller.dart';
-import '../card_button.dart';
-import '../navigation/destination.dart';
+import '../../app/app_controller.dart';
+import 'components/card_button.dart';
+import '../../app/destination.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);

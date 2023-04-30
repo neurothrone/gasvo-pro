@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../navigation/destination.dart';
+import 'destination.dart';
 import 'app_state.dart';
 
 final appProvider =

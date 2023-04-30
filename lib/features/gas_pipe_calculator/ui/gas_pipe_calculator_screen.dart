@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'gas_pipe_calculate_tab.dart';
+import 'components/gas_pipe_calculate_tab.dart';
+import 'components/gas_pipe_history_tab.dart';
 
 class GasPipeCalculatorScreen extends StatelessWidget {
   const GasPipeCalculatorScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class GasPipeCalculatorScreen extends StatelessWidget {
         body: const TabBarView(
           children: [
             GasPipeCalculateTab(),
-            Center(child: Text("History")),
+            GasPipeHistoryTab(),
           ],
         ),
       ),
